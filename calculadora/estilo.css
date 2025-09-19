@@ -1,0 +1,134 @@
+/* ===== Body ===== */
+body{
+    /* Gradiente de fundo vertical do topo (lightblue) para a base (white) */
+    background: linear-gradient(to bottom, lightblue, white);
+
+    /* Fonte principal do site */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Centraliza o texto horizontalmente */
+    text-align: center;
+
+    /* Layout flexível para organizar elementos verticalmente */
+    display: flex;
+    flex-direction: column; /* elementos em coluna (de cima para baixo) */
+    align-items: center;    /* centraliza horizontalmente */
+    justify-content: flex-start; /* elementos começam do topo */
+
+    /* Altura mínima da tela, para ocupar 90% da viewport */
+    min-height: 90vh;
+
+    /* Espaçamento interno da página */
+    padding: 20px;
+
+    /* Espaçamento entre elementos filhos do body */
+    gap: 10px;
+}
+
+/* ===== Calculadora ===== */
+#calculadora{
+    display: flex;
+    flex-direction: column; /* organiza visor e botões em coluna */
+    gap: 10px; /* espaçamento entre elementos internos */
+
+    /* Borda sólida com arredondamento */
+    border: 2px solid black;
+    border-radius: 16px;
+
+    /* Espaçamento interno */
+    padding: 20px;
+
+    /* Largura máxima e responsiva */
+    width: 100%;
+    max-width: 280px;
+
+    /* Centraliza horizontalmente */
+    margin: 20px auto;
+
+    /* Gradiente de fundo */
+    background: linear-gradient(to bottom, #00fc60, #00fce7);
+
+    /* Sombra para dar profundidade */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+
+    /* Transição suave para hover/efeitos visuais */
+    transition: all 0.3s ease-in-out;
+}
+
+/* ===== Visor ===== */
+#visor input {
+    width: 100%; /* ocupa toda a largura da calculadora */
+    height: 40px; 
+    font-size: 1.4rem; /* tamanho da fonte do visor */
+    font-family: 'Courier New', monospace; /* fonte monoespaçada */
+    text-align: right; /* números alinhados à direita */
+    padding: 8px 10px; /* espaçamento interno */
+    border: 2px solid #333; /* borda escura */
+    border-radius: 8px; /* cantos arredondados */
+    background-color: #f9f9f9;
+    color: #222; /* cor do texto */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* sombra interna */
+}
+
+/* Estilo quando input está desabilitado */
+#visor input:disabled {
+    background-color: #fff; /* fundo branco */
+    color: #000; /* texto preto */
+    opacity: 1; /* remove transparência padrão do disabled */
+}
+
+/* ===== Botões de números ===== */
+#numeros button {
+    width: 50px;
+    height: 50px;
+    margin: 5px; /* espaçamento entre botões */
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    /* Gradiente de fundo */
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+
+    color: #000000;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+
+    /* Transição suave ao passar mouse ou clicar */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover para botões de números */
+#numeros button:hover {
+    background: linear-gradient(to bottom, #00aaff, #0077cc); /* gradiente mais forte */
+    cursor: pointer; /* muda cursor ao passar por cima */
+}
+
+/* Efeito de clique nos botões de números */
+#numeros button:active {
+    background-color: #bbb; /* cor temporária ao clicar */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); /* efeito de pressão */
+}
+
+/* ===== Botões de operadores ===== */
+#operadores button {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+    color: white;
+    border: 1px solid #ff4c3b;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out; /* transição suave para hover/active */
+}
+
+/* Hover para botões de operadores */
+#operadores button:hover {
+    background: linear-gradient(to bottom, #ff4c3b, #ff1e00); /* gradiente mais forte */
+    cursor: pointer;
+}
+
+/* Efeito de clique nos botões de operadores */
+#operadores button:active {
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); /* efeito de pressão */
+}

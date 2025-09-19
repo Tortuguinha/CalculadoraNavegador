@@ -7,27 +7,32 @@
 </head>
 <body>
     <h1>Calculadora no Navegador</h1>
-    <div id ="calculadora">
-        <input type="text" id="display" disabled>
-    </div>
-    <div class="buttons">
-        <button class="numero">1</button>
-        <button class="numero">2</button>
-        <button class="numero">3</button>
-        <button class="numero">4</button>
-        <button class="numero">5</button>
-        <button class="numero">6</button>
-        <button class="numero">7</button>
-        <button class="numero">8</button>
-        <button class="numero">9</button>
-        <button class="numero">0</button>
-        <button class="operador">.</button>
-        <button class="operador">/</button>
-        <button class="operador">*</button>
-        <button class="operador">-</button>
-        <button class="operador">+</button>
-        <button class="operador">=</button>
-        <button class="operador">C</button>
+    <div id="calculadora">
+        <section id="visor">
+            <input type="text" id="display" disabled>
+        </section>
+        <section id="botoes">
+            <section id="numeros">
+                <button type="button">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <button type="button">4</button>
+                <button type="button">5</button>
+                <button type="button">6</button>
+                <button type="button">7</button>
+                <button type="button">8</button>
+                <button type="button">9</button>
+                <button type="button">0</button>
+            </section>
+            <section id="operadores">
+                <button type="button" aria-label="divisor">/</button>
+                <button type="button" aria-label="multiplicador">*</button>
+                <button type="button" aria-label="subtração">-</button>
+                <button type="button" aria-label="adição">+</button>
+                <button type="button" id="igual" aria-label="resultado">=</button>
+                <button type="button" id="limpar" aria-label="limpar">C</button>
+            </section>
+        </section>
     </div>
     <script src="logica.js"></script>
 </body>
